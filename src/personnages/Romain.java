@@ -3,10 +3,13 @@ package personnages;
 public class Romain {
 	private String nom;
 	private int force;
+	private Equipement[] equipe;
+	private int nbEquipement = 0;
 
 	public Romain(String nom, int force ) {
 		this.nom = nom;
 		this.force = force;
+		this.equipe = new Equipement[2];
 		assert force >0;
 	}
 
@@ -36,9 +39,21 @@ public class Romain {
 		assert force<ini : "post-condition de recevoir coup";
 
 	}
+
+	private void sEquiper(Equipement equi) {
+		switch (nbEquipement) {
+		case 2:
+			System.out.println("Le soldat "+nom+" est deja bien protege");
+		break;
+		case 1:
+			if Equipement[0]
+		}
+
+	}
+	
 	
 	public static void main(String[] args) {
 		Romain Minus = new Romain("Minus", 6);
-		System.out.println(Minus);
+		System.out.println(Equipement.Bouclier);
 	}
 }
