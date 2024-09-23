@@ -6,10 +6,13 @@ public class Gaulois {
 	private String nom;
 	private int force;
 	private int effetPotion = 1;
+	private Village village;
 
-	public Gaulois(String nom, int force) {
+	public Gaulois(String nom, int force, Village village) {
 		this.nom = nom;
 		this.force = force;
+		this.village = village;
+
 	}
 
 	public String getNom() {
@@ -35,10 +38,11 @@ public class Gaulois {
 	}
 
 	public static void main(String[] args) {
-		Gaulois Asterix= new Gaulois("Asterix", 8);
+		Gaulois Asterix = new Gaulois("Asterix", 8, null);
 		System.out.println(Asterix);
+		Romain Cesar = new Romain("Cesar", 5);
 		Asterix.prendreParole();
 		Asterix.parler("Yo soy el Asterix");
-		Asterix.frapper(Romain Cesar);
+		Asterix.frapper(Cesar);
 	}
 }
