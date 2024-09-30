@@ -51,9 +51,9 @@ public class Village {
 		Village desIrreductibles = new Village("Village des Irreductibles", 30);
 		Chef Abrax = new Chef("Abraracourcix", 6, desIrreductibles);
 		desIrreductibles.setChef(Abrax);
-		Gaulois Asterix = new Gaulois("Asterix", 8, desIrreductibles);
+		Gaulois Asterix = new Gaulois("Asterix", 8);
 		desIrreductibles.ajouterHabitant(Asterix);
-		Gaulois Obelix = new Gaulois("Obelix", 25, desIrreductibles);
+		Gaulois Obelix = new Gaulois("Obélix", 25);
 		desIrreductibles.ajouterHabitant(Obelix);
 		desIrreductibles.afficherVillageois();
 	}
