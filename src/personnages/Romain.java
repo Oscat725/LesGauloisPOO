@@ -3,13 +3,13 @@ package personnages;
 public class Romain {
 	private String nom;
 	private int force;
-	private Equipement[] equipe;
+	private Equipement[] equipements;
 	private int nbEquipement = 0;
 
 	public Romain(String nom, int force ) {
 		this.nom = nom;
 		this.force = force;
-		this.equipe = new Equipement[2];
+		this.equipements = new Equipement[2];
 		assert force >0;
 	}
 
@@ -40,13 +40,24 @@ public class Romain {
 
 	}
 
-	private void sEquiper(Equipement equi) {
+	private void sEquiper(Equipement equipement) {
 		switch (nbEquipement) {
 		case 2:
 			System.out.println("Le soldat "+nom+" est deja bien protege");
 		break;
 		case 1:
-			if Equipement[0]
+			if (equipements[0] ==equipement) {
+				System.out.println("Le soldat "+nom+" a deja un "+equipement+" !");
+				
+			}
+			else {
+				equipements[1]=equipement;
+				System.out.println("Le soldat "+nom+" s'equipe avec un "+equipement);
+			}
+			break;
+		case 0:
+			equipements[0]=equipement;
+			System.out.println("Le soldat "+nom+" s'equipe avec un "+equipement);
 		}
 
 	}
